@@ -28,10 +28,14 @@ class MyApp extends StatelessWidget {
                   child: Column(
                     mainAxisSize: MainAxisSize.min,
                     children: [
-                      Text(
-                        'Some Title',
-                        style: Theme.of(context).textTheme.headline3,
-                        // we can use Theme.of(context) to target props from Theme
+                      Builder(
+                        builder: (context) {
+                          return Text(
+                            'Some Title',
+                            style: Theme.of(context).textTheme.headline3,
+                            // we can use Theme.of(context) to target props from Theme
+                          );
+                        },
                       ),
                       Theme(
                         data: ThemeData.from(
