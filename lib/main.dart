@@ -53,9 +53,13 @@ class MyApp extends StatelessWidget {
                           );
                         }),
                       ),
-                      Text(
-                        'lots and lots and lots of body text',
-                        style: Theme.of(context).textTheme.bodyText2,
+                      Builder(
+                        builder: (context) {
+                          return Text(
+                            'lots and lots and lots of body text',
+                            style: Theme.of(context).textTheme.bodyText2,
+                          );
+                        },
                       ),
                       Icon(Icons.radar), //uses IconThemeData
                     ],

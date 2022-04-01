@@ -70,7 +70,7 @@ class MyTheme {
         ),
         bodyText2: TextStyle(
           fontSize: 18,
-          fontWeight: FontWeight.w300,
+          fontWeight: FontWeight.w900,
         ),
         subtitle1: TextStyle(
           fontSize: 24,
