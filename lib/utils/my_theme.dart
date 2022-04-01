@@ -7,7 +7,7 @@ class MyTheme {
     //final base = ThemeData.dark();
 
     //ThemeData.from( colorScheme: , textTheme: )
-    final ThemeData base = ThemeData.from(
+    final ThemeData darkBase = ThemeData.from(
       colorScheme: const ColorScheme(
         //base colour scheme that can be overridden for widgets
         primary: Colors.yellow,
@@ -49,6 +49,7 @@ class MyTheme {
         headline3: TextStyle(
           fontSize: 48,
           fontWeight: FontWeight.w300,
+          fontFamily: 'SendFlowers',
         ),
         headline4: TextStyle(
           fontSize: 36,
@@ -57,6 +58,7 @@ class MyTheme {
         headline5: TextStyle(
           fontSize: 24,
           fontWeight: FontWeight.w500,
+          fontFamily: 'SendFlowers',
         ),
         headline6: TextStyle(
           fontSize: 20,
@@ -87,7 +89,7 @@ class MyTheme {
 
     //then build on top of the colorScheme and textTheme
     //to style specific widgets
-    ThemeData dark = base.copyWith(
+    ThemeData dark = darkBase.copyWith(
       //colours set in here will override the ColorScheme
       scaffoldBackgroundColor: Colors.yellow[900],
       shadowColor: Color(0x9900cc66),
@@ -165,7 +167,15 @@ class MyTheme {
     return dark;
   }
 
-  // ThemeData light = ThemeData.from(
-  //   colorScheme: ColorScheme.fromSwatch(),
+  // static ThemeData buildLight() {
+  // ThemeData lightBase = ThemeData.from(
+  //   colorScheme: ColorScheme(),
+  //   textTheme: TextTheme(),
   // );
+  // ThemeData light = lightBase.copyWith(
+  //
+  // );
+  //
+  // return light;
+  // }
 }

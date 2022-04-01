@@ -10,6 +10,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       theme: MyTheme.buildDark(),
+      // theme: ThemeData.light(), //the default
       home: Scaffold(
         appBar: AppBar(
           leading: const Icon(Icons.back_hand),
@@ -32,9 +33,25 @@ class MyApp extends StatelessWidget {
                         style: Theme.of(context).textTheme.headline3,
                         // we can use Theme.of(context) to target props from Theme
                       ),
-                      Text(
-                        'Some SubTitle',
-                        style: Theme.of(context).textTheme.headline5,
+                      Theme(
+                        data: ThemeData.from(
+                          colorScheme: ColorScheme.fromSwatch(
+                            primarySwatch: Colors.amber,
+                          ),
+                          textTheme: const TextTheme(
+                            bodyText2: TextStyle(
+                              fontSize: 40,
+                              fontFamily: 'SendFlowers',
+                              color: Colors.amber,
+                            ),
+                          ),
+                        ),
+                        child: Builder(builder: (context) {
+                          return Text(
+                            'Some SubTitle',
+                            style: Theme.of(context).textTheme.bodyText2,
+                          );
+                        }),
                       ),
                       Text(
                         'lots and lots and lots of body text',
